@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lorrayne Gonçalves · Dados, automação e IA</title>
+  <meta name="description" content="Portfólio de Lorrayne Gonçalves, desenvolvedora de soluções digitais: dashboards, automações e aplicações com IA.">
+  <meta property="og:title" content="Lorrayne Gonçalves · Dados, automação e IA">
+  <meta property="og:description" content="Dashboards, automações e aplicações com IA que trocam trabalho manual por informação confiável.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F2F2EF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="topo__nome" href="#">Lorrayne Gonçalves</a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="abertura" aria-labelledby="titulo-abertura">
+      <div class="container abertura__grade">
+        <div>
+          <p class="sobretitulo">Dados · Automação · IA</p>
+          <h1 id="titulo-abertura">Organizo dados, automatizo rotinas e coloco IA para trabalhar.</h1>
+          <p class="abertura__texto">Sou Lorrayne Gonçalves, desenvolvedora de soluções digitais. Construo dashboards, automações e aplicações com IA que trocam trabalho manual por informação confiável.</p>
+        </div>
+
+        <nav class="indice" aria-label="Projetos por categoria">
+          <p class="indice__titulo">Índice de projetos</p>
+          <ol class="indice__lista">
+            <li><a href="#projetos" data-filtro="Dashboards"><span class="indice__num">01</span><span class="indice__nome">Dashboards</span><span class="indice__qtd" data-contagem="Dashboards">–</span></a></li>
+            <li><a href="#projetos" data-filtro="Automações"><span class="indice__num">02</span><span class="indice__nome">Automações</span><span class="indice__qtd" data-contagem="Automações">–</span></a></li>
+            <li><a href="#projetos" data-filtro="IA"><span class="indice__num">03</span><span class="indice__nome">IA</span><span class="indice__qtd" data-contagem="IA">–</span></a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section id="projetos" class="secao" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <h2 id="titulo-projetos">Projetos</h2>
+          <div class="filtros" role="group" aria-label="Filtrar projetos por categoria">
+            <button type="button" class="filtro" data-filtro="Todos" aria-pressed="true">Todos</button>
+            <button type="button" class="filtro" data-filtro="Dashboards" aria-pressed="false">Dashboards</button>
+            <button type="button" class="filtro" data-filtro="Automações" aria-pressed="false">Automações</button>
+            <button type="button" class="filtro" data-filtro="IA" aria-pressed="false">IA</button>
+          </div>
+        </div>
+
+        <p class="status" id="status-projetos" aria-live="polite"></p>
+        <ul class="grade" id="grade-projetos"></ul>
+        <div class="mais">
+          <button type="button" class="botao botao--contorno" id="ver-mais" aria-controls="grade-projetos" hidden>Ver mais</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao secao--sobre" aria-labelledby="titulo-sobre">
+      <div class="container sobre">
+        <div>
+          <p class="sobretitulo">Sobre</p>
+          <h2 id="titulo-sobre">Estrutura primeiro, gráfico depois.</h2>
+
+          <h3 class="sobre__subtitulo">Formação</h3>
+          <ul class="formacao">
+            <li><span>Pós-graduação em Ciência de Dados e Big Data Analytics</span><span class="formacao__situacao">Concluída em 2026</span></li>
+            <li><span>Análise e Desenvolvimento de Sistemas</span><span class="formacao__situacao">Concluído em 2025</span></li>
+            <li><span>Engenharia de Software</span><span class="formacao__situacao">Em andamento</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="sobre__subtitulo">Ferramentas</h3>
+          <div class="ferramentas">
+            <div class="bloco">
+              <h4>Dashboards</h4>
+              <p>Power BI, DAX, Power Query, modelagem de dados</p>
+            </div>
+            <div class="bloco">
+              <h4>Automações</h4>
+              <p>Python, Pandas, Selenium, Power Automate, n8n</p>
+            </div>
+            <div class="bloco bloco--largo">
+              <h4>IA</h4>
+              <dl class="bloco__lista">
+                <div><dt>Modelos (LLMs)</dt><dd>Claude, ChatGPT, Gemini</dd></div>
+                <div><dt>Agentes</dt><dd>Copilot Studio</dd></div>
+                <div><dt>Documentos</dt><dd>Azure AI, extração e validação de dados</dd></div>
+                <div><dt>Desenvolvimento com IA</dt><dd>Claude Code</dd></div>
+              </dl>
+            </div>
+            <div class="bloco">
+              <h4>Base</h4>
+              <p>SQL, SharePoint, Git e GitHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato" aria-labelledby="titulo-contato">
+      <div class="container">
+        <p class="sobretitulo">Contato</p>
+        <h2 id="titulo-contato">Tem um processo manual que poderia virar dado?</h2>
+        <ul class="contato__botoes">
+          <li><a class="botao botao--contorno-claro" href="https://github.com/Lorrayneegoncalves" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a class="botao botao--contorno-claro" href="https://www.linkedin.com/in/lorrayneegoncalves" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a class="botao botao--claro" href="mailto:lorraynegoncalvesr@outlook.com">E-mail</a></li>
+        </ul>
+        <p class="contato__email">lorraynegoncalvesr@outlook.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">Lorrayne Gonçalves</div>
+  </footer>
+
+  <template id="modelo-card">
+    <li class="card">
+      <div class="card__imagem"></div>
+      <div class="card__corpo">
+        <div class="card__meta">
+          <span class="card__categoria"></span>
+          <span class="selo" hidden>Em construção</span>
+        </div>
+        <h3 class="card__titulo"></h3>
+        <p class="card__descricao"></p>
+        <ul class="card__ferramentas" aria-label="Ferramentas"></ul>
+        <a class="card__link" target="_blank" rel="noopener">Ver repositório <span aria-hidden="true">→</span></a>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

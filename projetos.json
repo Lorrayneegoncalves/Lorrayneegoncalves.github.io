@@ -1,0 +1,62 @@
+[
+  {
+    "titulo": "Copiloto de Growth",
+    "categoria": "IA",
+    "descricao": "App que analisa uma campanha simulada de aquisição de entregadores. O funil e o teste A/B são calculados em Python, e um LLM só explica o resultado; um validador confere se cada número do texto existe nos cálculos.",
+    "ferramentas": ["Python", "Streamlit", "statsmodels", "OpenAI API", "pytest"],
+    "imagem": "assets/img/copiloto-growth.jpg",
+    "link": "https://github.com/Lorrayneegoncalves/copiloto-growth",
+    "destaque": true,
+    "emConstrucao": false
+  },
+  {
+    "titulo": "Pergunte aos dados",
+    "categoria": "IA",
+    "descricao": "Assistente que transforma perguntas em português em consultas SQL sobre preços de combustíveis da ANP. A consulta é validada, roda em modo somente leitura e aparece na tela junto com o resultado.",
+    "ferramentas": ["Python", "Streamlit", "SQLite", "OpenAI API", "pytest"],
+    "imagem": "assets/img/pergunte-aos-dados.jpg",
+    "link": "https://github.com/Lorrayneegoncalves/pergunte-aos-dados",
+    "destaque": true,
+    "emConstrucao": false
+  },
+  {
+    "titulo": "E-commerce Olist: SQL e dashboard",
+    "categoria": "Dashboards",
+    "descricao": "Análise do dataset público Olist em SQL Server, com modelagem das tabelas e validação da importação, e um dashboard interativo sobre receita, prazos de entrega e avaliações.",
+    "ferramentas": ["SQL Server (T-SQL)", "Python", "Streamlit", "Plotly"],
+    "imagem": "assets/img/olist.jpg",
+    "link": "https://github.com/Lorrayneegoncalves/analise-ecommerce-olist-sql",
+    "destaque": true,
+    "emConstrucao": false
+  },
+  {
+    "titulo": "Dashboard de DRE",
+    "categoria": "Dashboards",
+    "descricao": "Demonstrativo de resultado que compara o realizado com o orçado e o previsto, com KPIs financeiros, títulos dinâmicos e navegação entre as visões de tabela e bridge.",
+    "ferramentas": ["Power BI", "DAX", "Power Query", "Modelagem de dados"],
+    "imagem": "assets/img/dashboard-dre.jpg",
+    "link": "https://github.com/Lorrayneegoncalves/dashboard-dre-powerbi",
+    "destaque": false,
+    "emConstrucao": false
+  },
+  {
+    "titulo": "Dashboard de performance de vendas",
+    "categoria": "Dashboards",
+    "descricao": "Painel comercial com faturamento, margem, ticket médio e metas, segmentações por período, produto e região, e tema visual customizado.",
+    "ferramentas": ["Power BI", "DAX", "Power Query", "Modelagem de dados"],
+    "imagem": "assets/img/dashboard-vendas.jpg",
+    "link": "https://github.com/Lorrayneegoncalves/powerbi-dashboard-performance-vendas",
+    "destaque": false,
+    "emConstrucao": false
+  },
+  {
+    "titulo": "Triagem de anúncios com n8n e LLM",
+    "categoria": "Automações",
+    "descricao": "Fluxo que recebe o texto de um anúncio, pede a um modelo de linguagem uma análise estruturada em JSON e grava o resultado em uma planilha do Google Sheets.",
+    "ferramentas": ["n8n", "OpenAI API", "Google Sheets", "JavaScript"],
+    "imagem": "assets/img/triagem-n8n.jpg",
+    "link": "https://github.com/Lorrayneegoncalves/triagem-vagas-n8n-llm",
+    "destaque": false,
+    "emConstrucao": false
+  }
+]
