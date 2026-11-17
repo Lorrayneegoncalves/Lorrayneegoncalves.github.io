@@ -11,6 +11,9 @@ index.html          # página única: topo, abertura, projetos, sobre, contato, 
 styles.css          # cores, tipografia e layout (inclui as regras para celular)
 script.js           # lê projetos.json, monta os cards, os filtros, o índice e o "Ver mais"
 projetos.json       # lista de projetos (é o único arquivo que muda para incluir um projeto)
+validar.py          # confere o projetos.json; roda antes de cada publicação
+.github/workflows/
+  publicar.yml      # valida e publica o site no GitHub Pages
 assets/
   favicon.svg
   img/              # imagens dos cards
@@ -47,15 +50,23 @@ MODELO_README_PROJETO.md   # modelo de README para os repositórios de projeto
    | `destaque` | `true` para aparecer antes dos outros; `false` caso contrário. |
    | `emConstrucao` | `true` para mostrar o selo "Em construção". |
 
-3. **Confira localmente.** O site lê o JSON com `fetch`, então não funciona abrindo o `index.html` direto do disco. Na pasta do repositório, rode:
+3. **Confira o JSON.** Na pasta do repositório, rode:
+
+   ```bash
+   python validar.py
+   ```
+
+   Ele avisa, em português, se há vírgula sobrando ou faltando, campo esquecido ou com nome errado, categoria escrita diferente, imagem que não existe em `assets/img/` (maiúsculas e minúsculas contam) ou link sem `https://`. Com tudo certo, mostra `projetos.json OK`.
+
+4. **Veja no navegador (opcional).** O site lê o JSON com `fetch`, então não funciona abrindo o `index.html` direto do disco. Rode:
 
    ```bash
    python -m http.server 8000
    ```
 
-   e abra http://localhost:8000. Se os cards não aparecerem, provavelmente há um erro no JSON (vírgula sobrando ou faltando). Dá para validar colando o conteúdo em https://jsonlint.com.
+   e abra http://localhost:8000.
 
-4. **Publique.**
+5. **Publique.**
 
    ```bash
    git add projetos.json assets/img
@@ -63,7 +74,11 @@ MODELO_README_PROJETO.md   # modelo de README para os repositórios de projeto
    git push
    ```
 
-   O GitHub Pages atualiza o site em um ou dois minutos.
+   O push dispara o workflow **Validar e publicar** (aba *Actions* do repositório). Ele roda o mesmo `validar.py` e só publica se passar; o site atualiza em um ou dois minutos. Se a conferência falhar, aparece um X vermelho no commit, o site continua no ar com a versão anterior e o log do passo "Conferir projetos.json" mostra o que corrigir.
+
+## Publicação
+
+O site é publicado pelo GitHub Actions (`.github/workflows/publicar.yml`), não direto da branch. Em *Settings → Pages*, a opção *Source* precisa estar em **GitHub Actions**. Para publicar de novo sem um commit novo, use *Actions → Validar e publicar → Run workflow*.
 
 ## Regras da página
 
